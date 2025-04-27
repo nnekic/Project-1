@@ -17,3 +17,7 @@ jobs:
         run: javac AppZaProjekat.java   
       - name: run Java app
         run: java AppZaProjekat
+      - name: testing server
+        run: |
+          sleep 5
+          curl -f http://localhost:8081/
