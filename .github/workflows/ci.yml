@@ -21,3 +21,12 @@ jobs:
         run: |
           sleep 5
           curl -f http://localhost:8081/
+
+  push_to_docker_hub:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Login to the DockerHub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
