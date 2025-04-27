@@ -16,7 +16,7 @@ jobs:
       - name: compile Java
         run: javac AppZaProjekat.java   
       - name: run Java app
-        run: java AppZaProjekat
+        run: java AppZaProjekat &
       - name: testing server
         run: |
           sleep 5
